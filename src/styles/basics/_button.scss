@@ -1,0 +1,15 @@
+@mixin button-base {
+  width: 363px;
+  height: 53px;
+  font-size: 32px;
+}
+
+.button_base {
+  @include button-base;
+  &--primary {
+    background-color: red;
+  }
+  &--secondary {
+    background-color: blue;
+  }
+}
