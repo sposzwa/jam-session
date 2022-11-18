@@ -1,8 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .button {
+    font-size: 2rem;
+    width: 363px;
+    height: 53px;
+    border: var(--main-color) 2px solid;
+    border-radius: 4px;
+  }
+  .button--primary {
+    background-color: var(--main-color);
+    color: white;
+  }
+  .button--secondary {
+    background-color: transparent;
+    color: var(--main-color);
+  }
+  .button:hover {
+    background-color: var(--main-color-darker);
+    border: var(--main-color-darker) 2px solid;
+    color: white;
+  }
+  .input {
+    width: 363px;
+    font-weight: light;
+    height: theme(spacing.10);
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 1.25rem;
+    border-bottom: 2px #d5605875 solid;
+    padding: theme('spacing.6');
+    padding-left: 0;
+    margin-top: theme('spacing.10');
+  }
+  .input:focus {
+    outline: none;
+  }
+  .input::placeholder {
+    color: #d5605875;
+    padding: theme('spacing.1');
+    line-height: theme('spacing.2');
+  }
+}
+
 :root {
+  --main-color: #d56058;
+  --main-color-darker: #b83930;
+  --smallest: 1.375rem;
+  --smaller: 1.875rem;
+  --main-gradient: linear-gradient(270deg, #ffeed6 0%, #ffffff 100%);
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -17,15 +68,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+
+  color: var(--main-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--main-color-darker);
 }
 
 body {
@@ -62,13 +115,6 @@ button:focus-visible {
 
 .card {
   padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {
