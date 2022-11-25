@@ -23,11 +23,7 @@
         />
       </div>
     </div>
-    <button class="mt-5 leading-3 transition block button button--primary" type="submit">
-      Sign In
-    </button>
-    <button class="mt-5 leading-3 transition block button button--secondary" type="button">
-      Sign Up
-    </button>
+    <button class="transition block button button--primary" type="submit">Sign In</button>
+    <button class="transition block button button--secondary" type="button">Sign Up</button>
   </form>
 </template>

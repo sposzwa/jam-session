@@ -5,11 +5,14 @@ import HelloWorld from './components/HelloWorld.vue'
 import SignIn from './views/SignIn.vue'
 import SignUp from './views/SignUp.vue'
 import UserProfile from './views/UserProfile.vue'
+import OtherUser from './views/OtherUser.vue'
+import PasswordReset from './views/PasswordReset.vue'
+import MainPage from './views/MainPage.vue'
 </script>
 
 <template>
   <div class="w-[100vw] h-[100vh]">
-    <UserProfile />
+    <MainPage />
   </div>
 </template>
 

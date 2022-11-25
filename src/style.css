@@ -6,11 +6,14 @@
 
 @layer components {
   .button {
+    color: var(--main-color);
     font-size: 2rem;
     width: 363px;
     height: 53px;
     border: var(--main-color) 2px solid;
     border-radius: 4px;
+    line-height: theme(lineHeight.3);
+    margin-top: theme(spacing.5);
   }
   .button--primary {
     background-color: var(--main-color);
@@ -87,6 +90,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--main-gradient);
 }
 
 h1 {
@@ -110,7 +114,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /*outline: 4px auto -webkit-focus-ring-color;*/
 }
 
 .card {

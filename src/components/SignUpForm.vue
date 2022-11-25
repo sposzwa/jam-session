@@ -19,11 +19,7 @@
       placeholder="Repeat your password"
       required
     />
-    <button class="mt-5 leading-3 transition block button button--primary" type="submit">
-      Sign Up
-    </button>
-    <button class="mt-5 leading-3 transition block button button--secondary" type="button">
-      Go back
-    </button>
+    <button class="transition block button button--primary" type="submit">Sign Up</button>
+    <button class="transition block button button--secondary" type="button">Go back</button>
   </form>
 </template>
