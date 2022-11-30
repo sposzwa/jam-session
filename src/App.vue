@@ -1,31 +1,23 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import SignIn from './views/SignIn.vue'
-import SignUp from './views/SignUp.vue'
-import UserProfile from './views/UserProfile.vue'
-import OtherUser from './views/OtherUser.vue'
-import PasswordReset from './views/PasswordReset.vue'
-import MainPage from './views/MainPage.vue'
+import { routes } from './plugins/router';
+import { ref } from 'vue';
+
+const links = [{ name: 'home' }, { name: 'sign-in' }];
+const show = ref(true);
 </script>
 
 <template>
   <div class="w-[100vw] h-[100vh]">
-    <MainPage />
+    <div :class="show ? ' ' : 'hidden'" class="flex flex-col justify-center items-center">
+      <div>
+        <h1 class="mt-20">Routes</h1>
+        <ul class="mt-10">
+          <li class="text-2xl pb-5" @click="show = !show" v-for="link in routes" v-bind:key="link.path">
+            <router-link :to="{ path: link.path }">{{ link.name }}</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <router-view />
   </div>
 </template>
-
-<style scoped>
-import .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <form class="mt-10 flex gap-5">
+  <form class="flex gap-5">
     <div class="flex flex-col items-center">
       <button class="social-button hover:border-[transparent]" type="button">
         <img src="../../assets/images/add-to-friends-icon.svg" />
