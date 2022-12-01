@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import { routes } from "./plugins/router";
+import { ref } from "vue";
+const show = ref(true);
+</script>
+
 <template>
-  <div class="w-[100vw] h-[100vh]">
+  <div class="w-[100vw] h-[100vh] overflow-x-hidden">
     <div
       :class="show ? ' ' : 'hidden'"
       class="flex flex-col justify-center items-center"
@@ -18,12 +24,6 @@
         </ul>
       </div>
     </div>
-    <router-view />
+    <router-view :class="show ? 'hidden' : ' '" />
   </div>
 </template>
-
-<script setup lang="ts">
-import { routes } from "./plugins/router";
-import { ref } from "vue";
-const show = ref(true);
-</script>

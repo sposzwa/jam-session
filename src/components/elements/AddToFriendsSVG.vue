@@ -1,0 +1,19 @@
+<template>
+  <svg
+    class="group"
+    width="61"
+    height="61"
+    viewBox="0 0 61 61"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="30.5"
+      cy="30.5"
+      r="30.5"
+      class="transition fill-main-color group-hover:fill-main-color-darker"
+    />
+    <line x1="17" y1="30.5" x2="45" y2="30.5" stroke="white" stroke-width="5" />
+    <line x1="30.5" y1="45" x2="30.5" y2="17" stroke="white" stroke-width="5" />
+  </svg>
+</template>

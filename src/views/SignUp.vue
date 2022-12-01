@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import SignUpForm from '../components/SignUpForm.vue'
-import Deco1 from '../components/elements/Deco1.vue'
-import Deco2 from '../components/elements/Deco2.vue'
+import SignUpForm from "../components/SignUpForm.vue";
+import DecorationElement from "../components/elements/DecorationElement.vue";
 </script>
 
 <template>
   <div class="flex flex-col items-center w-screen h-screen bg-main-gradient">
-    <LogoLarge class="relative z-10 mt-[70px]" />
-    <SignUpForm class="relative z-10" />
+    <SignUpForm class="relative z-10 mt-10" />
     <SignUpSocials />
-    <Deco2 class="absolute top-[124px] left-[200px] z-0" />
+    <DecorationGroup>
+      <DecorationElement
+        class="top-[224px] left-[400px]"
+        imagePath="./src/assets/images/deco-2.svg" />
+      <DecorationElement
+        class="top-[624px] left-[1300px]"
+        imagePath="./src/assets/images/deco-4.svg"
+    /></DecorationGroup>
   </div>
 </template>

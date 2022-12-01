@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import UserPhoto from '../components/ui/UserPhoto.vue'
-import UserInfo from '../components/ui/UserInfo.vue'
-import UserSettings from '../components/ui/UserSettings.vue'
-import Deco3 from '../components/elements/Deco3.vue'
-import Deco4 from '../components/elements/Deco4.vue'
+import UserPhoto from "../components/ui/UserPhoto.vue";
+import UserInfo from "../components/ui/UserInfo.vue";
+import UserSettings from "../components/ui/UserSettings.vue";
+import DecorationElement from "../components/elements/DecorationElement.vue";
+import UserSettingsButtons from "../components/ui/UserSettingsButtons.vue";
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
-    <UserPhoto />
-    <UserInfo class="text-center flex flex-col items-center w-80 align" />
-    <UserSettings />
-    <Deco3 class="top-[778px] left-[137px]" />
-    <Deco4 class="top-[223px] left-[1468px]" />
+  <div
+    class="w-[100vw] h-[100vh] overflow-hidden relative flex flex-col items-center"
+  >
+    <UserPhoto class="mt-20" />
+    <UserInfo class="mt-5 text-center flex flex-col items-center w-96 align" />
+    <UserSettingsButtons />
+    <DecorationGroup>
+      <DecorationElement
+        class="top-[550px] left-[1550px] mix-blend-overlay"
+        imagePath="./src/assets/images/deco-3.svg" />
+      <DecorationElement
+        class="top-[200px] left-[227px]"
+        imagePath="./src/assets/images/deco-2.svg"
+    /></DecorationGroup>
   </div>
 </template>
